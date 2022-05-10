@@ -1,25 +1,8 @@
 # React Native Redux Toolkit Example
 
-This is an example project for a blog post about using Redux Toolkit in React Native.
+Sửa lại từ mẫu ví dụ lấy từ địa chỉ https://hybridheroes.de/blog
 
-Find out more here https://hybridheroes.de/blog
-
+# Jobs done
+Load Text và Input, sửa Input => Sửa Text thông qua Dispatch
 ## Getting started
 
-### Install dependencies
-
-```sh
-npm install
-```
-
-### Run iOS
-
-```sh
-npm run ios
-```
-
-### Run Android
-
-```sh
-npm run android
-```
