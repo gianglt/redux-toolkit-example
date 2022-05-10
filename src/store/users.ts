@@ -3,6 +3,7 @@ import {
   createEntityAdapter,
   createSlice
 } from '@reduxjs/toolkit';
+
 import { RootState } from '.';
 
 interface UserData {
@@ -25,7 +26,9 @@ const usersSlice = createSlice({
   initialState: usersAdapter.getInitialState({
     loading: false
   }),
-  reducers: {},
+  reducers: {
+
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchUsers.pending, (state) => {
       state.loading = true;
