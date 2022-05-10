@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 import Message from './components/Message';
 import Users from './components/Users';
+import Secondary from './components/Secondary';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <ScrollView contentContainerStyle={styles.container}>
           <Message />
           <Users />
+          <Secondary/>
         </ScrollView>
       </SafeAreaView>
     </Provider>

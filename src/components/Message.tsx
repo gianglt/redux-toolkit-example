@@ -6,41 +6,32 @@ import { setMessage } from '../store/message';
 
 const Message = () => {
   const dispatch = useDispatch();
-  // const [text, onChangeText] = React.useState("");
+  const [text, SetText] = React.useState("Initial");
   const { message} = useSelector((state: RootState) => state.message);
 
-
-  const onChangeText = (text: string) => {
+  const handlePress = () => {
     dispatch(setMessage(text));
   };
 
-  const handlePress = () => {
-    dispatch(setMessage("Reset text"));
-  };
-
-  // useEffect(() => {
-  
-  //   return () => {
-      
-  //   }
-  // }, [])
-  
 
   return (
     <View style={styles.container}>
       <View style={styles.row}>
         <TextInput
           style={styles.input}
-          onChangeText={(text) => onChangeText(text)}
-          value={message}
+          onChangeText={SetText}
+          value={text}
         />
 
       </View>
       <View style={styles.row}>
-        <Text style={styles.text}>{message}</Text>
+        <Text style={styles.text}>{text}</Text>
       </View>
       <View style={styles.row}>
-        <Button title={'Reset Message'} onPress={handlePress} />
+        <Text style={styles.text}>DISPATCH {message}</Text>
+      </View>
+      <View style={styles.row}>
+        <Button title='Call Redux' onPress={handlePress} />
       </View>
 
     </View>

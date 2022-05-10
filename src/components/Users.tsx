@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../store';
 import { fetchUsers, selectAllUsers } from '../store/users';
 
+
 const Users = () => {
   const dispatch = useDispatch();
   const { loading } = useSelector((state: RootState) => state.users);
@@ -17,6 +18,7 @@ const Users = () => {
 
   useEffect(() => {
     dispatch(fetchUsers());
+
   }, []);
 
   if (loading) {
@@ -59,5 +61,8 @@ const styles = StyleSheet.create({
   },
   dataContainer: {
     flexDirection: 'row'
-  }
+  },
+  text:{
+    fontStyle:'italic',
+  },
 });
